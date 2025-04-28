@@ -22,6 +22,18 @@ from aalec.constants.display import (
     MAX_LINE_COUNT,
     WHITE,
 )
+from aalec.constants.general import (
+    PIN_ADC,
+    PIN_BEEPER,
+    PIN_BUTTON,
+    PIN_ENCODER_TRACK_1,
+    PIN_ENCODER_TRACK_2,
+    PIN_RGB_STRIP,
+    PIN_RX,
+    PIN_SCL,
+    PIN_SDA,
+    PIN_TX,
+)
 
 __all__ = [
     "BLACK",
@@ -30,6 +42,16 @@ __all__ = [
     "DUTY50",
     "LINE_HEIGHT",
     "MAX_LINE_COUNT",
+    "PIN_ADC",
+    "PIN_BEEPER",
+    "PIN_BUTTON",
+    "PIN_ENCODER_TRACK_1",
+    "PIN_ENCODER_TRACK_2",
+    "PIN_RGB_STRIP",
+    "PIN_RX",
+    "PIN_SCL",
+    "PIN_SDA",
+    "PIN_TX",
     "PRESSED",
     "RELEASED",
     "SAMPLE_PERIOD",
