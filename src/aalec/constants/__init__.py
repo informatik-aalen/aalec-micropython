@@ -13,9 +13,13 @@ from aalec.constants.beeper import (
     t_h_1,
     t_off,
 )
+from aalec.constants.button import PRESSED, RELEASED, SAMPLE_PERIOD
 
 __all__ = [
     "DUTY50",
+    "PRESSED",
+    "RELEASED",
+    "SAMPLE_PERIOD",
     "t_a_1",
     "t_a_2",
     "t_c_1",
