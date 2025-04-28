@@ -22,6 +22,7 @@ from aalec.constants.display import (
     MAX_LINE_COUNT,
     WHITE,
 )
+from aalec.constants.environment import BMP280_ADDR
 from aalec.constants.general import (
     PIN_ADC,
     PIN_BEEPER,
@@ -37,6 +38,7 @@ from aalec.constants.general import (
 
 __all__ = [
     "BLACK",
+    "BMP280_ADDR",
     "DISPLAY_HEIGHT",
     "DISPLAY_WIDTH",
     "DUTY50",
