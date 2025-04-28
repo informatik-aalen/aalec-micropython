@@ -14,9 +14,22 @@ from aalec.constants.beeper import (
     t_off,
 )
 from aalec.constants.button import PRESSED, RELEASED, SAMPLE_PERIOD
+from aalec.constants.display import (
+    BLACK,
+    DISPLAY_HEIGHT,
+    DISPLAY_WIDTH,
+    LINE_HEIGHT,
+    MAX_LINE_COUNT,
+    WHITE,
+)
 
 __all__ = [
+    "BLACK",
+    "DISPLAY_HEIGHT",
+    "DISPLAY_WIDTH",
     "DUTY50",
+    "LINE_HEIGHT",
+    "MAX_LINE_COUNT",
     "PRESSED",
     "RELEASED",
     "SAMPLE_PERIOD",
@@ -30,4 +43,5 @@ __all__ = [
     "t_g_1",
     "t_h_1",
     "t_off",
+    "WHITE",
 ]
