@@ -1,0 +1,51 @@
+[project]
+name = "aalec-micropython"
+dynamic = ["version"]
+description = "Micropython Firmware for the AALeC"
+license = { text = "MIT" }
+readme = "README.md"
+authors = [
+    { name = "Sebastian Stigler", email = "sebastian.stigler@hs-aalen.de" },
+]
+requires-python = ">=3.12"
+dependencies = ["micropython-esp8266-stubs>=1.23.0.post2", "mpremote>=1.24.1"]
+
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.hatch.build]
+package-dir = "src"
+editable-backend = "editables"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aalec"]
+
+[tool.uv-dynamic-versioning]
+fallback-version = "0.0.0"
+
+[dependency-groups]
+dev = [
+    "esptool>=4.8.1",
+    "markdown-callouts>=0.4.0",
+    "markdown-exec>=1.10.3",
+    "mkdocs-literate-nav>=0.6.2",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.12",
+    "mkdocstrings[python]>=0.29.1",
+    "mpremote>=1.25.0",
+    "rshell>=0.0.36",
+    "wheel>=0.45.1",
+    "mkdocs-minify-plugin>=0.8.0",
+    "pymdown-extensions>=10.14.3",
+    "mkdocstrings-python>=1.16.10",
+    "mkdocs-gen-files>=0.5.0",
+    "ruff>=0.11.6",
+    "inquirerpy>=0.3.4",
+    "mypy>=1.15.0",
+    "mpy-cross>=1.25.0.post2",
+    "colorama>=0.4.6",
+]
