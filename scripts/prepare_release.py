@@ -9,7 +9,7 @@ from InquirerPy import inquirer
 
 root = pathlib.Path(__file__).parent.parent
 src = root / "src"
-out = root / "out"
+out = root / "aalec-micropython-stubs/src"
 
 
 def get_version(dist: str = "aalec-micropython") -> str:
@@ -36,8 +36,14 @@ def rm_stubs():
 
 def stubgen():
     print(Fore.BLUE, "⚒️  Generate new subs in 'out/aalec' ", end="")
-    cmd = ["stubgen", "-p", "aalec", "--include-docstrings"]
-    subprocess.run(cmd, stdout=subprocess.PIPE)
+    cmd = [
+        "stubgen",
+        "--include-docstrings",
+        "--output",
+        str(out),
+        str(src),
+    ]
+    subprocess.run(cmd)  # , stdout=subprocess.PIPE)
     print(Fore.GREEN + "✔" + Style.RESET_ALL)
 
 

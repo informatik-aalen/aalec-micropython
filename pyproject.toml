@@ -8,7 +8,27 @@ authors = [
     { name = "Sebastian Stigler", email = "sebastian.stigler@hs-aalen.de" },
 ]
 requires-python = ">=3.12"
-dependencies = ["micropython-esp8266-stubs>=1.23.0.post2", "mpremote>=1.24.1"]
+dependencies = ["micropython-esp8266-stubs>=1.23.0.post2", "mpremote>=1.25.0"]
+classifiers = [
+    "Typing :: Typed",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: MicroPython",
+    "Operating System :: OS Independent",
+    "Topic :: Text Editors :: Integrated Development Environments (IDE)",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: Software Development :: Testing",
+    "Natural Language :: English",
+]
+
+[project.urls]
+Homepage = "https://github.com/informatik-aalen/AALeC-micropython"
+Documentation = "https://informatik-aalen.github.io/AALeC-micropython"
+Repository = "https://github.com/informatik-aalen/AALeC-micropython"
+Issues = "https://github.com/informatik-aalen/AALeC-micropython/issues"
 
 [build-system]
 requires = ["hatchling", "uv-dynamic-versioning"]
@@ -26,6 +46,9 @@ packages = ["src/aalec"]
 
 [tool.uv-dynamic-versioning]
 fallback-version = "0.0.0"
+
+[tool.uv.workspace]
+members = ["aalec-micropython-stubs"]
 
 [dependency-groups]
 dev = [

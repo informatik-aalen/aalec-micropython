@@ -53,9 +53,13 @@
       "src/aalec/environment.mpy"
     ],
     [
-      "aalec/main.mpy",
-      "src/aalec/main.mpy"
+      "aalec/rgb_strip.mpy",
+      "src/aalec/rgb_strip.mpy"
+    ],
+    [
+      "aalec/third_party/__init__.mpy",
+      "src/aalec/third_party/__init__.mpy"
     ]
   ],
-  "version": "0.0.0.post7.dev0+ce70171"
+  "version": "0.1.0"
 }
