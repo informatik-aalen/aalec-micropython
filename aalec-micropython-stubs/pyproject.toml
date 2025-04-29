@@ -49,5 +49,9 @@ packages = ["src/aalec"]
 
 [tool.uv-dynamic-versioning]
 fallback-version = "0.0.0"
+vcs = "git"
+style = "pep440"
+bump = true
+
 [dependency-groups]
 dev = ["wheel>=0.45.1"]
