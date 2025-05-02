@@ -6,7 +6,7 @@ This is the micropython implementation of the
 Arduino library on GitHub.
 
 The documentation of this library can be found at
-[https://informatik-aalen.github.io/aalec-micropython](https://informatik-aalen.github.io/aalec-micropython).
+[aalec-micropython](https://informatik-aalen.github.io/aalec-micropython) on GitHub Pages.
 
 The stubs for this library can be found at
 [aalec-micropython-stubs](https://pypi.org/project/aalec-micropython-stubs/)
@@ -90,7 +90,7 @@ Open your project in [Visual Studio Code](https://code.visualstudio.com/download
 code .
 ```
 
-Create a new file in `src/aalec-project` with the name `first_program.py`
+Create a new file in `src/aalec_project` with the name `first_program.py`
 
 ```python
 
@@ -106,13 +106,13 @@ def hello_aalec():
 Open a console in VSCode and upload the file to the AALeC:
 
 ```shell
-mpremote cp src/aalec-project/first_program.py
+uv run mpremote cp src/aalec_project/first_program.py :.
 ```
 
 To start the program on the AALeC connect to the repl (*r*ead *e*valuate *p*rint *l*oop)
 
 ```shell
-mpremote
+uv run mpremote
 
 # Now you are in the repl
 
