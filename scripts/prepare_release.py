@@ -4,6 +4,7 @@ import pathlib
 import subprocess
 
 from colorama import Fore, Style
+from griffe import check
 import mpy_cross
 from InquirerPy import inquirer
 
@@ -57,7 +58,8 @@ def rm_compiled():
 def compile():
     print(Fore.BLUE, "⚒️  Compile micropython files ", end="")
     for path in sorted(src.rglob("*.py")):
-        mpy_cross.run(path)
+        p = mpy_cross.run(path)
+        p.wait()
     print(Fore.GREEN + "✔" + Style.RESET_ALL)
 
 
