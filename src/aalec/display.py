@@ -1,3 +1,5 @@
+"""Display utilities."""
+
 import machine  # type: ignore
 from aalec import constants
 from aalec.third_party import sh1106
