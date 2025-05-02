@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://informatik-aalen.github.io/aalec-micropython/">
+      
       
       
         <link rel="next" href="license/">
@@ -207,6 +209,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/informatik-aalen/aalec-micropython/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aalec-micropython
+  </div>
+</a>
+      </div>
+    
   </nav>
   
     
@@ -317,6 +331,18 @@
     </a>
     AALeC - Micropython
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/informatik-aalen/aalec-micropython/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aalec-micropython
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -995,35 +1021,47 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#first-setup" class="md-nav__link">
+  <a href="#1-create-a-new-project-aalec-project-with-uv" class="md-nav__link">
     <span class="md-ellipsis">
-      First Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="First Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#flash-micropython-on-the-microcontroller" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flash Micropython on the Microcontroller
+      1. Create a new project (aalec-project) with uv
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-this-library-on-the-microcontroller" class="md-nav__link">
+  <a href="#2-install-the-stub-files-for-the-aalec-library" class="md-nav__link">
     <span class="md-ellipsis">
-      Install this library on the Microcontroller
+      2. Install the stub files for the AALeC library
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#3-download-the-micropython-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Download the micropython firmware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-flash-micropython-to-the-esp8266-on-the-aalec" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Flash micropython to the ESP8266 on the AALeC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-finally-install-the-aalec-micropython-library-on-the-aalec" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Finally, install the aalec-micropython library on the AALeC
+    </span>
+  </a>
   
 </li>
         
@@ -1033,9 +1071,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#your-first-project-with-the-aalec-library" class="md-nav__link">
+  <a href="#write-your-first-program-for-the-aalec" class="md-nav__link">
     <span class="md-ellipsis">
-      Your first project with the AALeC Library
+      Write your first program for the AALeC
     </span>
   </a>
   
@@ -1065,70 +1103,103 @@
                   
 
 
+  
+  
+    
+      
+    
+    <a href="https://github.com/informatik-aalen/aalec-micropython/raw/master/docs/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
 
 <h1 id="micropython-firmware-for-the-aalec">Micropython Firmware for the AALeC<a class="headerlink" href="#micropython-firmware-for-the-aalec" title="Permanent link">&para;</a></h1>
 <p>This is the micropython implementation of the
 <a href="https://github.com/informatik-aalen/AALeC-V3">informatik-aalen/AALeC-V3</a>
 Arduino library on GitHub.</p>
 <p>The documentation of this library can be found at
-<a href="https://informatik-aalen.github.io/AALeC-micropython">https://informatik-aalen.github.io/AALeC-micropython</a></p>
+<a href="https://informatik-aalen.github.io/aalec-micropython">https://informatik-aalen.github.io/aalec-micropython</a>.</p>
+<p>The stubs for this library can be found at
+<a href="https://pypi.org/project/aalec-micropython-stubs/">aalec-micropython-stubs</a>
+on PyPi.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>It is recommended to use <a href="https://docs.astral.sh/uv/getting-started/">uv</a> to
 install the virtual python environment.</p>
-<p>First clone this repository:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/informatik-aalen/AALeC-micropython.git
+<p>Please follow these five simple steps to install the micropython firmware for
+your AALeC.</p>
+<h3 id="1-create-a-new-project-aalec-project-with-uv">1. Create a new project (<code>aalec-project</code>) with <code>uv</code><a class="headerlink" href="#1-create-a-new-project-aalec-project-with-uv" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>init<span class="w"> </span>--lib<span class="w"> </span>aalec-project
 </code></pre></div>
-<p>Create the virtual environment:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>AALeC-micropython
-uv<span class="w"> </span>sync
-</code></pre></div>
-<p>Finally activate the virtual environment:</p>
-<div class="highlight"><pre><span></span><code>.<span class="w"> </span>.venv/bin/activate
-</code></pre></div>
-<p>The following steps require an activated virtual environment!</p>
-<h3 id="first-setup">First Setup<a class="headerlink" href="#first-setup" title="Permanent link">&para;</a></h3>
-<p>The following two steps are only required for the initial setup of the AALeC.
-Afterwards you only need to upload your python files.</p>
-<h4 id="flash-micropython-on-the-microcontroller">Flash Micropython on the Microcontroller<a class="headerlink" href="#flash-micropython-on-the-microcontroller" title="Permanent link">&para;</a></h4>
-<p>Connect the AALeC with your PC with a USB-cable and flash the Micropython
-firmware to the ESP8266 of the AALeC.
-The current tested version of Micropython can be found in the <code>firmware</code>
-directory of this repository:</p>
-<div class="highlight"><pre><span></span><code>esptool.py<span class="w"> </span>--port<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>erase_flash
-esptool.py<span class="w"> </span>--port<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>--baud<span class="w"> </span><span class="m">460800</span><span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>write_flash<span class="w"> </span>--flash_size<span class="o">=</span>detect<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>firmware/ESP8266_GENERIC-20241129-v1.24.1.bin
-</code></pre></div>
-<h4 id="install-this-library-on-the-microcontroller">Install this library on the Microcontroller<a class="headerlink" href="#install-this-library-on-the-microcontroller" title="Permanent link">&para;</a></h4>
-<p>The last step is to upload the AALeC Library to the ESP8266 of the AALeC:</p>
-<div class="highlight"><pre><span></span><code>mpremote<span class="w"> </span>mip<span class="w"> </span>install<span class="w"> </span>./package.json
-</code></pre></div>
-<h2 id="your-first-project-with-the-aalec-library">Your first project with the AALeC Library<a class="headerlink" href="#your-first-project-with-the-aalec-library" title="Permanent link">&para;</a></h2>
-<p>Open a new terminal and create a new project (with the name <code>new_project</code>).</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please make sure that you <strong>don't</strong> put your new project as a subdirectory
-of this repository!</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Initialize the new project</span>
-uv<span class="w"> </span>init<span class="w"> </span>--lib<span class="w"> </span>aalec_project
-
-<span class="c1"># Install the stubs for this library</span>
-<span class="nb">cd</span><span class="w"> </span>aalec_project
+<h3 id="2-install-the-stub-files-for-the-aalec-library">2. Install the stub files for the AALeC library<a class="headerlink" href="#2-install-the-stub-files-for-the-aalec-library" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>aalec-project
 uv<span class="w"> </span>add<span class="w"> </span>aalec-micropython-stubs
+</code></pre></div>
+<h3 id="3-download-the-micropython-firmware">3. Download the micropython firmware<a class="headerlink" href="#3-download-the-micropython-firmware" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>firmware
+<span class="nb">cd</span><span class="w"> </span>firmware
+wget<span class="w"> </span>https://micropython.org/resources/firmware/ESP8266_GENERIC-20241129-v1.24.1.bin
+<span class="nb">cd</span><span class="w"> </span>..
+</code></pre></div>
+<h3 id="4-flash-micropython-to-the-esp8266-on-the-aalec">4. Flash micropython to the ESP8266 on the AALeC<a class="headerlink" href="#4-flash-micropython-to-the-esp8266-on-the-aalec" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Connect the ESP8266 on the AALeC with USB to your PC</li>
+<li>Erase the Flash with:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>esptool.py<span class="w"> </span>--port<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>erase_flash
+</code></pre></div>
+<ul>
+<li>Flash micropython with:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>esptool.py<span class="w"> </span>--port<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>--baud<span class="w"> </span><span class="m">460800</span><span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>write_flash<span class="w"> </span>--flash_size<span class="o">=</span>detect<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>firmware/ESP8266_GENERIC-20241129-v1.24.1.bin
+</code></pre></div>
+<h3 id="5-finally-install-the-aalec-micropython-library-on-the-aalec">5. Finally, install the <code>aalec-micropython</code> library on the AALeC<a class="headerlink" href="#5-finally-install-the-aalec-micropython-library-on-the-aalec" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mpremote<span class="w"> </span>mip<span class="w"> </span>install<span class="w"> </span>github:informatik-aalen/aalec-micropython
+</code></pre></div>
+<p>✨ Now is your AALeC ready to be used! ✨</p>
+<p>Your project should now have the following file structure:</p>
+<div class="highlight"><pre><span></span><code>/
+├── firmware
+│   └── ESP8266_GENERIC-20241129-v1.24.1.bin
+├── pyproject.toml
+├── README.md
+├── src
+│   └── aalec_project
+│       ├── __init__.py
+│       └── py.typed
+└── uv.lock
+</code></pre></div>
+<h2 id="write-your-first-program-for-the-aalec">Write your first program for the AALeC<a class="headerlink" href="#write-your-first-program-for-the-aalec" title="Permanent link">&para;</a></h2>
+<p>Open your project in <a href="https://code.visualstudio.com/download">Visual Studio Code</a> by typing the following command in your terminal:</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>.
+</code></pre></div>
+<p>Create a new file in <code>src/aalec-project</code> with the name <code>first_program.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">aalec</span>
 
-<span class="c1"># Open the project in VSCode:</span>
-code<span class="w"> </span>.
+<span class="k">def</span><span class="w"> </span><span class="nf">hello_aalec</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">aalec</span><span class="o">.</span><span class="n">AALeC</span><span class="p">()</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">print_line</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;  Hello AALeC!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">app</span>
 </code></pre></div>
-<p>Put your python files in the <code>src/new_project</code> directory.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>You have written your code in <code>src/new_project/my_file.py</code>.</p>
-<p>Then you can open a terminal in VSCode, activate the virtual environment,
-and upload this file to the AALeC with:</p>
-<div class="highlight"><pre><span></span><code>mpremote<span class="w"> </span>cp<span class="w"> </span>src/new_project/my_file.py<span class="w"> </span>:my_file.py
+<p>Open a console in VSCode and upload the file to the AALeC:</p>
+<div class="highlight"><pre><span></span><code>mpremote<span class="w"> </span>cp<span class="w"> </span>src/aalec-project/first_program.py
 </code></pre></div>
-</div>
+<p>To start the program on the AALeC connect to the repl (<em>r</em>ead <em>e</em>valuate <em>p</em>rint <em>l</em>oop)</p>
+<div class="highlight"><pre><span></span><code>mpremote
+
+<span class="c1"># Now you are in the repl</span>
+
+import<span class="w"> </span>first_program
+
+first_program.hello_aalec<span class="o">()</span>
+</code></pre></div>
+<p>Now your AALeC will show the text <code>Hello AALeC!</code> in the middle of its display.</p>
+<p>You can exit the repl by pressing <code>&lt;Strg&gt; + &lt;x&gt;</code>.</p>
+<p>🎉 Happy coding! 🎉</p>
 <h2 id="3rd-party-libraries">3rd Party Libraries<a class="headerlink" href="#3rd-party-libraries" title="Permanent link">&para;</a></h2>
 <p>The AALeC library contains the following third party libraries:</p>
 <p>The Library <code>sh1106.py</code> came from <a href="https://github.com/robert-hh/SH1106">https://github.com/robert-hh/SH1106</a>.</p>
