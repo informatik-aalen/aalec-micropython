@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Sebastian Stigler", email = "sebastian.stigler@hs-aalen.de" },
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 dependencies = [
     "esptool>=4.8.1",
     "micropython-esp8266-stubs>=1.23.0.post2",
@@ -28,10 +28,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/informatik-aalen/AALeC-micropython"
-Documentation = "https://informatik-aalen.github.io/AALeC-micropython"
-Repository = "https://github.com/informatik-aalen/AALeC-micropython"
-Issues = "https://github.com/informatik-aalen/AALeC-micropython/issues"
+Homepage = "https://github.com/informatik-aalen/aalec-micropython"
+Documentation = "https://informatik-aalen.github.io/aalec-micropython"
+Repository = "https://github.com/informatik-aalen/aalec-micropython"
+Issues = "https://github.com/informatik-aalen/aalec-micropython/issues"
 
 [build-system]
 requires = ["hatchling", "uv-dynamic-versioning"]

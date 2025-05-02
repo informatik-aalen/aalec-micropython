@@ -1,3 +1,4 @@
+
 # Micropython Firmware for the AALeC
 
 This is the micropython implementation of the
@@ -5,94 +6,126 @@ This is the micropython implementation of the
 Arduino library on GitHub.
 
 The documentation of this library can be found at
-[https://informatik-aalen.github.io/AALeC-micropython](https://informatik-aalen.github.io/AALeC-micropython)
+[https://informatik-aalen.github.io/aalec-micropython](https://informatik-aalen.github.io/aalec-micropython).
+
+The stubs for this library can be found at
+[aalec-micropython-stubs](https://pypi.org/project/aalec-micropython-stubs/)
+on PyPi.
 
 ## Installation
 
 It is recommended to use [uv](https://docs.astral.sh/uv/getting-started/) to
 install the virtual python environment.
 
-First clone this repository:
+Please follow these five simple steps to install the micropython firmware for
+your AALeC.
 
-```bash
-git clone https://github.com/informatik-aalen/AALeC-micropython.git
-```
-
-Create the virtual environment:
-
-```bash
-cd AALeC-micropython
-uv sync
-```
-
-Finally activate the virtual environment:
-
-```bash
-. .venv/bin/activate
-```
-
-The following steps require an activated virtual environment!
-
-### First Setup
-
-The following two steps are only required for the initial setup of the AALeC.
-Afterwards you only need to upload your python files.
-
-#### Flash Micropython on the Microcontroller
-
-Connect the AALeC with your PC with a USB-cable and flash the Micropython
-firmware to the ESP8266 of the AALeC.
-The current tested version of Micropython can be found in the `firmware`
-directory of this repository:
+### 1\. Create a new project (`aalec-project`) with `uv`
 
 ```shell
-esptool.py --port /dev/ttyUSB0 erase_flash
-esptool.py --port /dev/ttyUSB0 --baud 460800 \
-        write_flash --flash_size=detect 0 \
-        firmware/ESP8266_GENERIC-20241129-v1.24.1.bin
+uv init --lib aalec-project
 ```
 
-#### Install this library on the Microcontroller
+### 2\. Install the stub files for the AALeC library
 
-The last step is to upload the AALeC Library to the ESP8266 of the AALeC:
-
-```bash
-mpremote mip install ./package.json
-```
-
-## Your first project with the AALeC Library
-
-Open a new terminal and create a new project (with the name `new_project`).
-
-!!! Warning
-
-    Please make sure that you **don't** put your new project as a subdirectory
-    of this repository!
-    
 ```shell
-# Initialize the new project
-uv init --lib aalec_project
-
-# Install the stubs for this library
-cd aalec_project
+cd aalec-project
 uv add aalec-micropython-stubs
+```
 
-# Open the project in VSCode:
+### 3\. Download the micropython firmware
+
+```shell
+mkdir firmware
+cd firmware
+wget https://micropython.org/resources/firmware/ESP8266_GENERIC-20241129-v1.24.1.bin
+cd ..
+```
+
+### 4\. Flash micropython to the ESP8266 on the AALeC
+
+* Connect the ESP8266 on the AALeC with USB to your PC
+* Erase the Flash with:
+
+  ```shell
+  uv run esptool.py --port /dev/ttyUSB0 erase_flash
+  ```
+
+* Flash micropython with:
+  
+  ```shell
+  uv run esptool.py --port /dev/ttyUSB0 --baud 460800 \
+            write_flash --flash_size=detect 0 \
+            firmware/ESP8266_GENERIC-20241129-v1.24.1.bin
+  ```
+
+### 5\. Finally, install the `aalec-micropython` library on the AALeC
+
+```shell
+uv run mpremote mip install github:informatik-aalen/aalec-micropython
+```
+
+✨ Now is your AALeC ready to be used! ✨
+
+Your project should now have the following file structure:
+
+```dir
+/
+├── firmware
+│   └── ESP8266_GENERIC-20241129-v1.24.1.bin
+├── pyproject.toml
+├── README.md
+├── src
+│   └── aalec_project
+│       ├── __init__.py
+│       └── py.typed
+└── uv.lock
+```
+
+## Write your first program for the AALeC
+
+Open your project in [Visual Studio Code](https://code.visualstudio.com/download) by typing the following command in your terminal:
+
+```shell
 code .
 ```
 
-Put your python files in the `src/new_project` directory.
+Create a new file in `src/aalec-project` with the name `first_program.py`
 
-!!! example
+```python
 
-    You have written your code in `src/new_project/my_file.py`.
-    
-    Then you can open a terminal in VSCode, activate the virtual environment,
-    and upload this file to the AALeC with:
-    
-    ```bash
-    mpremote cp src/new_project/my_file.py :my_file.py
-    ```
+import aalec
+
+def hello_aalec():
+    app = aalec.AALeC()
+
+    app.print_line(3, "  Hello AALeC!")
+    return app
+```
+
+Open a console in VSCode and upload the file to the AALeC:
+
+```shell
+mpremote cp src/aalec-project/first_program.py
+```
+
+To start the program on the AALeC connect to the repl (*r*ead *e*valuate *p*rint *l*oop)
+
+```shell
+mpremote
+
+# Now you are in the repl
+
+import first_program
+
+first_program.hello_aalec()
+```
+
+Now your AALeC will show the text `Hello AALeC!` in the middle of its display.
+
+You can exit the repl by pressing `<Strg> + <x>`.
+
+🎉 Happy coding! 🎉
 
 ## 3rd Party Libraries
 

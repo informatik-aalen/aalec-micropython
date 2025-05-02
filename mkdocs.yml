@@ -1,6 +1,9 @@
 site_name: 'AALeC - Micropython'
 site_description: 'Micropython Firmware for the AALeC'
 site_dir: site
+site_url: 'https://informatik-aalen.github.io/aalec-micropython/'
+repo_url: 'https://github.com/informatik-aalen/aalec-micropython/'
+repo_name: 'aalec-micropython'
 watch: [mkdocs.yml, README.md, src/aalec]
 copyright: Copyright &copy; 2025 Sebastian Stigler
 

@@ -59,7 +59,15 @@
     [
       "aalec/third_party/__init__.mpy",
       "src/aalec/third_party/__init__.mpy"
+    ],
+    [
+      "aalec/third_party/bmp280.mpy",
+      "src/aalec/third_party/bmp280.mpy"
+    ],
+    [
+      "aalec/third_party/sh1106.mpy",
+      "src/aalec/third_party/sh1106.mpy"
     ]
   ],
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
