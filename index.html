@@ -1176,7 +1176,7 @@ wget<span class="w"> </span>https://micropython.org/resources/firmware/ESP8266_G
 <p>Open your project in <a href="https://code.visualstudio.com/download">Visual Studio Code</a> by typing the following command in your terminal:</p>
 <div class="highlight"><pre><span></span><code>code<span class="w"> </span>.
 </code></pre></div>
-<p>Create a new file in <code>src/aalec-project</code> with the name <code>first_program.py</code></p>
+<p>Create a new file in <code>src/aalec_project</code> with the name <code>first_program.py</code></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">aalec</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">hello_aalec</span><span class="p">():</span>
@@ -1186,7 +1186,7 @@ wget<span class="w"> </span>https://micropython.org/resources/firmware/ESP8266_G
     <span class="k">return</span> <span class="n">app</span>
 </code></pre></div>
 <p>Open a console in VSCode and upload the file to the AALeC:</p>
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mpremote<span class="w"> </span>cp<span class="w"> </span>src/aalec-project/first_program.py
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mpremote<span class="w"> </span>cp<span class="w"> </span>src/aalec_project/first_program.py<span class="w"> </span>:.
 </code></pre></div>
 <p>To start the program on the AALeC connect to the repl (<em>r</em>ead <em>e</em>valuate <em>p</em>rint <em>l</em>oop)</p>
 <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mpremote
