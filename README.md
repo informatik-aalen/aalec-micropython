@@ -44,6 +44,11 @@ cd ..
 
 ### 4\. Flash micropython to the ESP8266 on the AALeC
 
+!!! danger
+
+    Make sure you remove the jumper J2 before you attempt to use the esptool.
+    Otherwise you will get an error that says, the ESP8266  can't be connected via serial port.
+
 * Connect the ESP8266 on the AALeC with USB to your PC
 * Erase the Flash with:
 
