@@ -91,6 +91,8 @@ def commit_to_git(version: str):
         ["git", "add", "."],
         ["git", "commit", "-m", "New release"],
         ["git", "tag", f"v{version}"],
+        ["uv", "pip", "uninstall", "aalec-micropython"],
+        ["uv", "sync"],
         {"args": ["uv", "build"], "cwd": out.parent},
         ["uv", "lock", "--upgrade-package=aalec-micropython"],
         ["uv", "lock", "--upgrade-package=aalec-micropython-stubs"],
