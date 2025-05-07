@@ -108,7 +108,6 @@ def commit_to_git(version: str):
 
 
 if __name__ == "__main__":
-    print(Fore.YELLOW, f"Current version: {get_version()}", Style.RESET_ALL)
     try:
         version = inquirer.text(  # type: ignore
             message="Choose the version number for the release:", default=get_version()
@@ -122,6 +121,9 @@ if __name__ == "__main__":
         choice = inquirer.confirm(  # type: ignore
             "Do you want to commit to git?", default=False
         ).execute()
+        if choice:
+            commit_to_git(version)
     except KeyboardInterrupt:
         print(Fore.RED, "Command aborted! 😭 💥 😱", Style.RESET_ALL)
-    print(Fore.GREEN, "Command successful! 🐍 🌟 ✨", Style.RESET_ALL)
+    else:
+        print(Fore.GREEN, "Command successful! 🐍 🌟 ✨", Style.RESET_ALL)
