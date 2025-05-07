@@ -9,7 +9,7 @@ members = [
 
 [[package]]
 name = "aalec-micropython"
-version = "0.3.4"
+version = "0.3.4.post1.dev0+31ffc19"
 source = { editable = "." }
 dependencies = [
     { name = "micropython-esp8266-stubs" },
