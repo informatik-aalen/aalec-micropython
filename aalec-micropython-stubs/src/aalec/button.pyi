@@ -20,9 +20,5 @@ class Button:
             bool: `True` if the value has changed since the last call. `False` otherwise.
         """
 
-def test_button(button_pin: int) -> None:
-    """Test for the Button class.
-
-    Args:
-        button_pin (int): The pin the button of the encoder is connected to.
-    """
+def test_button() -> None:
+    """Test for the Button class."""

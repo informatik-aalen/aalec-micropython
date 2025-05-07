@@ -62,13 +62,11 @@ class Button:
             self._value = constants.PRESSED
 
 
-def test_button(button_pin: int) -> None:
-    """Test for the Button class.
+def test_button() -> None:
+    """Test for the Button class."""
+    b = Button(constants.PIN_BUTTON)
 
-    Args:
-        button_pin (int): The pin the button of the encoder is connected to.
-    """
-    b = Button(button_pin)
+    print(f"Button value: {b.get_button()}", end="\r")
 
     while True:
         if b.button_changed():
