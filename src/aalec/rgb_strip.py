@@ -87,7 +87,7 @@ class RgbStrip:
         self._np.write()
 
 
-def test_rbg_strip():
+def test_rgb_strip():
     """Test for the rgb strip class."""
     from time import sleep
 

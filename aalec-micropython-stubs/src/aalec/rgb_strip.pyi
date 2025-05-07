@@ -44,5 +44,5 @@ class RgbStrip:
     def reset(self) -> None:
         """Reset the strip and turns all leds off."""
 
-def test_rbg_strip() -> None:
+def test_rgb_strip() -> None:
     """Test for the rgb strip class."""
