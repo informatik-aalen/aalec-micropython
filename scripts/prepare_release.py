@@ -43,7 +43,7 @@ def stubgen():
         str(out),
         str(src),
     ]
-    subprocess.run(cmd)  # , stdout=subprocess.PIPE)
+    subprocess.run(cmd, stdout=subprocess.PIPE)
     print(Fore.GREEN + "✔" + Style.RESET_ALL)
 
 
@@ -84,7 +84,26 @@ def create_package_json(version: str):
     print(Fore.GREEN + "✔" + Style.RESET_ALL)
 
 
+def commit_to_git(version: str):
+    print(Fore.BLUE, "⚒️  Commit to git:", Style.RESET_ALL)
+
+    commands = [
+        ["git", "add", "."],
+        ["git", "commit", "-m", "New release"],
+        ["git", "tag", f"v{version}"],
+        ["uv", "lock", "--upgrade-package=aalec-micropython"],
+        ["uv", "lock", "--upgrade-package=aalec-micropython-stubs"],
+        ["git", "add", "."],
+        ["git", "commit", "-m", "Upgrade uv.lock"],
+    ]
+    for command in commands:
+        print(Fore.BLUE, f"  🔸{' '.join(command)} ", end="")
+        subprocess.run(command, stdout=subprocess.PIPE)
+        print(Fore.GREEN + "✔" + Style.RESET_ALL)
+
+
 if __name__ == "__main__":
+    print(Fore.YELLOW, f"Current version: {get_version()}", Style.RESET_ALL)
     try:
         version = inquirer.text(  # type: ignore
             message="Choose the version number for the release:", default=get_version()
@@ -95,6 +114,9 @@ if __name__ == "__main__":
         rm_compiled()
         compile()
         create_package_json(version)
+        choice = inquirer.confirm(  # type: ignore
+            "Do you want to commit to git?", default=False
+        ).execute()
     except KeyboardInterrupt:
         print(Fore.RED, "Command aborted! 😭 💥 😱", Style.RESET_ALL)
     print(Fore.GREEN, "Command successful! 🐍 🌟 ✨", Style.RESET_ALL)
