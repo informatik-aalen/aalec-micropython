@@ -1143,6 +1143,11 @@ wget<span class="w"> </span>https://micropython.org/resources/firmware/ESP8266_G
 <span class="nb">cd</span><span class="w"> </span>..
 </code></pre></div>
 <h3 id="4-flash-micropython-to-the-esp8266-on-the-aalec">4. Flash micropython to the ESP8266 on the AALeC<a class="headerlink" href="#4-flash-micropython-to-the-esp8266-on-the-aalec" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
+<p>Make sure you remove the jumper J2 before you attempt to use the esptool.
+Otherwise you will get an error that says, the ESP8266 can't be connected via serial port.</p>
+</div>
 <ul>
 <li>Connect the ESP8266 on the AALeC with USB to your PC</li>
 <li>Erase the Flash with:</li>
