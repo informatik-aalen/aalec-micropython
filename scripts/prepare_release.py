@@ -91,14 +91,19 @@ def commit_to_git(version: str):
         ["git", "add", "."],
         ["git", "commit", "-m", "New release"],
         ["git", "tag", f"v{version}"],
+        {"args": ["uv", "build"], "cwd": out.parent},
         ["uv", "lock", "--upgrade-package=aalec-micropython"],
         ["uv", "lock", "--upgrade-package=aalec-micropython-stubs"],
         ["git", "add", "."],
         ["git", "commit", "-m", "Upgrade uv.lock"],
     ]
     for command in commands:
-        print(Fore.BLUE, f"  🔸{' '.join(command)} ", end="")
-        subprocess.run(command, stdout=subprocess.PIPE)
+        if isinstance(command, dict):
+            print(Fore.BLUE, f"  🔸{' '.join(command['args'])} !!", end="")
+            subprocess.run(**command, stdout=subprocess.PIPE)
+        else:
+            print(Fore.BLUE, f"  🔸{' '.join(command)}", end="")
+            subprocess.run(command, stdout=subprocess.PIPE)
         print(Fore.GREEN + "✔" + Style.RESET_ALL)
 
 
