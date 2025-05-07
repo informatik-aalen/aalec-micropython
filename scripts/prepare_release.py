@@ -4,7 +4,6 @@ import pathlib
 import subprocess
 
 from colorama import Fore, Style
-from griffe import check
 import mpy_cross
 from InquirerPy import inquirer
 
