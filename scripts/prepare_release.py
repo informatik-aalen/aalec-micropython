@@ -91,19 +91,23 @@ def commit_to_git(version: str):
         ["git", "add", "."],
         ["git", "commit", "-m", "New release"],
         ["git", "tag", f"v{version}"],
+        {"args": ["uv", "build"], "cwd": out.parent},
         ["uv", "lock", "--upgrade-package=aalec-micropython"],
         ["uv", "lock", "--upgrade-package=aalec-micropython-stubs"],
         ["git", "add", "."],
         ["git", "commit", "-m", "Upgrade uv.lock"],
     ]
     for command in commands:
-        print(Fore.BLUE, f"  🔸{' '.join(command)} ", end="")
-        subprocess.run(command, stdout=subprocess.PIPE)
+        if isinstance(command, dict):
+            print(Fore.BLUE, f"  🔸{' '.join(command['args'])} !!", end="")
+            subprocess.run(**command, stdout=subprocess.PIPE)
+        else:
+            print(Fore.BLUE, f"  🔸{' '.join(command)}", end="")
+            subprocess.run(command, stdout=subprocess.PIPE)
         print(Fore.GREEN + "✔" + Style.RESET_ALL)
 
 
 if __name__ == "__main__":
-    print(Fore.YELLOW, f"Current version: {get_version()}", Style.RESET_ALL)
     try:
         version = inquirer.text(  # type: ignore
             message="Choose the version number for the release:", default=get_version()
@@ -117,6 +121,9 @@ if __name__ == "__main__":
         choice = inquirer.confirm(  # type: ignore
             "Do you want to commit to git?", default=False
         ).execute()
+        if choice:
+            commit_to_git(version)
     except KeyboardInterrupt:
         print(Fore.RED, "Command aborted! 😭 💥 😱", Style.RESET_ALL)
-    print(Fore.GREEN, "Command successful! 🐍 🌟 ✨", Style.RESET_ALL)
+    else:
+        print(Fore.GREEN, "Command successful! 🐍 🌟 ✨", Style.RESET_ALL)
